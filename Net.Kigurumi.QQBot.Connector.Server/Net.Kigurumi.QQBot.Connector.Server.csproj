@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Net.Kigurumi.QQBot.Core\Net.Kigurumi.QQBot.Core.csproj" />
+  </ItemGroup>
+
 </Project>
