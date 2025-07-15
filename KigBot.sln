@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36212.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Connector", "Connector", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Kigurumi.QQBot.Core", "Net.Kigurumi.QQBot.Core\Net.Kigurumi.QQBot.Core.csproj", "{0896EE22-1B03-46DD-A19A-CC8645990D08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Kigurumi.QQBot.Connector.Server", "Net.Kigurumi.QQBot.Connector.Server\Net.Kigurumi.QQBot.Connector.Server.csproj", "{0D69C687-794C-429B-B0EC-72C3EDA3DA7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Kigurumi.QQBot.Connector.Client", "Net.Kigurumi.QQBot.Connector.Client\Net.Kigurumi.QQBot.Connector.Client.csproj", "{5B541EDC-6B53-4266-A3BA-A6430A829226}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Kigurumi.QQBot.Shared", "Net.Kigurumi.QQBot.Shared\Net.Kigurumi.QQBot.Shared.csproj", "{E81A340E-4551-4CF6-AACB-52051459FE37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Kigurumi.QQBot.Host", "Net.Kigurumi.QQBot.Host\Net.Kigurumi.QQBot.Host.csproj", "{A8C886E8-66F8-4EE8-8559-8D75213CB6E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0896EE22-1B03-46DD-A19A-CC8645990D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0896EE22-1B03-46DD-A19A-CC8645990D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0896EE22-1B03-46DD-A19A-CC8645990D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0896EE22-1B03-46DD-A19A-CC8645990D08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D69C687-794C-429B-B0EC-72C3EDA3DA7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D69C687-794C-429B-B0EC-72C3EDA3DA7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D69C687-794C-429B-B0EC-72C3EDA3DA7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D69C687-794C-429B-B0EC-72C3EDA3DA7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B541EDC-6B53-4266-A3BA-A6430A829226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B541EDC-6B53-4266-A3BA-A6430A829226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B541EDC-6B53-4266-A3BA-A6430A829226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B541EDC-6B53-4266-A3BA-A6430A829226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E81A340E-4551-4CF6-AACB-52051459FE37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E81A340E-4551-4CF6-AACB-52051459FE37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E81A340E-4551-4CF6-AACB-52051459FE37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E81A340E-4551-4CF6-AACB-52051459FE37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C886E8-66F8-4EE8-8559-8D75213CB6E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C886E8-66F8-4EE8-8559-8D75213CB6E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C886E8-66F8-4EE8-8559-8D75213CB6E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C886E8-66F8-4EE8-8559-8D75213CB6E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D69C687-794C-429B-B0EC-72C3EDA3DA7B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{5B541EDC-6B53-4266-A3BA-A6430A829226} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {412EFE59-9786-4A1A-8890-19BAC64FAFD1}
+	EndGlobalSection
+EndGlobal

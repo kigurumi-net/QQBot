@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Net.Kigurumi.QQBot.Host": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
