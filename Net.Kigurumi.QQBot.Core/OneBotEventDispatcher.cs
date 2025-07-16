@@ -30,13 +30,20 @@ namespace Net.Kigurumi.QQBot.Core
 
             switch (postType)
             {
+                // 消息
                 case "message":
                     var messageType = root.GetProperty("message_type").GetString();
+                    // 群消息
                     if (messageType == "group")
                     {
                         var groupMsg = JsonSerializer.Deserialize<GroupMessageEvent>(json);
                         if (groupMsg != null)
                             await _handler.OnGroupMessageAsync(groupMsg);
+                    }else if (messageType == "private")
+                    {
+                        var privateMsg = JsonSerializer.Deserialize<PrivateMessageEvent>(json);
+                        if (privateMsg != null)
+                            await _handler.OnPrivateMessageAsync(privateMsg);
                     }
                     break;
 
@@ -49,9 +56,36 @@ namespace Net.Kigurumi.QQBot.Core
                             await _handler.OnGroupRequestAsync(req);
                     }
                     break;
+                
+                case "notice":
+                    var noticeType = root.GetProperty("notice_type").GetString();
+                    switch (noticeType)
+                    {
+                        case "group_increase":
+                            var increase = JsonSerializer.Deserialize<GroupIncreaseNoticeEvent>(json);
+                            if (increase != null)
+                                await _handler.OnGroupIncreaseAsync(increase);
+                            break;
+
+                        case "group_decrease":
+                            var decrease = JsonSerializer.Deserialize<GroupDecreaseNoticeEvent>(json);
+                            if (decrease != null)
+                                await _handler.OnGroupDecreaseAsync(decrease);
+                            break;
+
+                        // 可继续添加其他 notice 类型
+                    }
+                    // 可以继续添加其他 notice_type，如 group_upload、group_admin 等
+                    break;
+                
+                case "meta_event":
+                    var meta = JsonSerializer.Deserialize<MetaEvent>(json);
+                    if (meta != null)
+                        await _handler.OnMetaEventAsync(meta);
+                    break;
 
                 default:
-                    // 其他 post_type（如 notice、meta_event）暂不处理
+                    // 其他 post_type 暂不处理
                     break;
             }
         }
