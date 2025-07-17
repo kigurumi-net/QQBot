@@ -12,7 +12,7 @@ namespace Net.Kigurumi.QQBot.Host.Handlers
     {
         public Task OnGroupMessageAsync(GroupMessageEvent evt)
         {
-            Console.WriteLine($"[群消息] 群: {evt.GroupId}, 用户: {evt.UserId}, 内容: {evt.Message}");
+            Console.WriteLine($"[群消息] 群: {evt.GroupId}, 用户: {evt.UserId}, 内容: {evt.ParsedMessage}");
             return Task.CompletedTask;
         }
 
@@ -69,5 +69,18 @@ namespace Net.Kigurumi.QQBot.Host.Handlers
             Console.WriteLine($"[{DateTimeOffset.FromUnixTimeSeconds(evt.Time)}][群成员减少] 群号: {evt.GroupId}，成员: {evt.UserId}，操作者: {evt.OperatorId}，行为: {action}");
             return Task.CompletedTask;
         }
+
+        public Task OnPrivateMessageSentAsync(PrivateMessageEvent evt)
+        {
+            Console.WriteLine($"[私聊消息]自己给：{evt.UserId} 发消息：{evt.ParsedMessage}");
+            return Task.CompletedTask;
+        }
+
+        public Task OnGroupMessageSentAsync(GroupMessageEvent evt)
+        {
+            Console.WriteLine($"[群消息]自己在群：{evt.GroupId} 发消息：{evt.ParsedMessage}");
+            return Task.CompletedTask;
+        }
+        
     }
 }

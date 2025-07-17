@@ -20,6 +20,14 @@ namespace Net.Kigurumi.QQBot.Core.Interfaces
         // 群成员减少
         Task OnGroupDecreaseAsync(GroupDecreaseNoticeEvent evt);
         
+        // 发送消息
+        
+        // 发送群消息
+        Task OnGroupMessageSentAsync(GroupMessageEvent evt);
+        
+        //发送私聊消息
+        Task OnPrivateMessageSentAsync(PrivateMessageEvent evt);
+        
         // 私聊
         Task OnPrivateMessageAsync(PrivateMessageEvent evt);
         
